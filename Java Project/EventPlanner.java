@@ -1,3 +1,5 @@
+// package event.lib;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -9,6 +11,10 @@ public class EventPlanner {
         this.name = name;
         this.events = new ArrayList<>();
         this.requestedEvents = new ArrayList<>();
+    }
+
+    public void viewEvents() {
+        System.out.println(events);
     }
 
     public Event findEvent(String id) {
@@ -44,7 +50,8 @@ public class EventPlanner {
         for (Event it : events) {
             String chk = it.geTeventId();
             if (chk.charAt(0) == 'T' && chk.charAt(1) == 'P' && it.geTeventTitle().equals(title)) {
-                ans.add(new TourPackage(it.geTeventTitle(), it.geTeventDate(), it.geTdurationInDays(),
+                ans.add(new TourPackage(it.geTeventTitle(), it.geTcustomerContact(), it.geTeventDate(),
+                        it.geTdurationInDays(),
                         it.geTnumOfParticipants(), it.geTunitPrice()));
             }
         }
@@ -66,27 +73,74 @@ public class EventPlanner {
         }
     }
 
+    public void acceptedEvent() {
+        for (Event it : events) {
+            System.out.println(it);
+        }
+    }
+
+    public void shoWrequestedEvents() {
+        System.out.println(requestedEvents);
+    }
+
     public String offerTourPackage(String eventTitle, LocalDate eventDate, int durationInDays, int numOfParticipants,
             int perPersonPrice,
             ArrayList<String> placesToVisit) {
-        TourPackage chk = new TourPackage(eventTitle, eventDate, durationInDays, numOfParticipants, perPersonPrice);
+        TourPackage chk = new TourPackage(eventTitle, null, eventDate, durationInDays, numOfParticipants,
+                perPersonPrice);
         events.add(chk);
         return chk.geTeventId();
     }
 
     public String offerTourPackage(String eventTitle, LocalDate eventDate, int durationInDays, int numOfParticipants,
             int perPersonPrice) {
-        TourPackage chk = new TourPackage(eventTitle, eventDate, durationInDays, numOfParticipants, perPersonPrice);
+        TourPackage chk = new TourPackage(eventTitle, null, eventDate, durationInDays, numOfParticipants,
+                perPersonPrice);
         events.add(chk);
         return chk.geTeventId();
     }
 
     public void registerForTour(String tourId, int participants, String contact) {
         Event chk = findEvent(tourId);
-        // System.out.println(chk);
-        // if (chk!=null) {
-        //     thk.registerForTour(participants, contact);
-        // }
+        if (chk != null) {
+            TourPackage tk = new TourPackage(tourId, contact, null, participants, participants, participants);
+            tk.registerForTour(participants, contact);
+        }
     }
 
+    public void assignEventManager(String eventID, String managerName) {
+        Event chk = findEvent(eventID);
+        if (chk != null) {
+            chk.setEventManager(managerName);
+        }
+    }
+
+    public void addEventTask(String eventID, String title, String description) {
+        Event chk = findEvent(eventID);
+        if (chk != null) {
+            chk.addTask(title, description);
+        }
+    }
+
+    public void startEventTask(String eventID, String title) {
+        Event chk = findEvent(eventID);
+        if (chk != null) {
+            chk.startTask(title);
+        }
+    }
+
+    public void completeEventTask(String eventID, String title) {
+        Event chk = findEvent(eventID);
+        if (chk != null) {
+            chk.completeTask(title);
+        }
+    }
+
+    public double payBill(String eventId) {
+        Event chk = findEvent(eventId);
+        if (chk != null) {
+            return chk.getBill();
+        }
+        return 0;
+    }
 }

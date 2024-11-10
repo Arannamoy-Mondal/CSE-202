@@ -1,3 +1,4 @@
+// package event.lib;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -5,9 +6,9 @@ public class TourPackage extends Event {
     ArrayList<String> placesToVisit;
     ArrayList<String> customerContacts;
     private int numOfRegisteredParticipants,perPersonPrice;
-    public TourPackage(String eventTitle, LocalDate eventDate, int durationInDays, int numOfParticipants,
+    public TourPackage(String eventTitle, String customerContact,LocalDate eventDate, int durationInDays, int numOfParticipants,
             int perPersonPrice) {
-        super(eventTitle, eventTitle, eventDate, durationInDays, numOfParticipants);
+        super(eventTitle, customerContact, eventDate, durationInDays, numOfParticipants);
         this.placesToVisit = new ArrayList<>();
         this.customerContacts = new ArrayList<>();
         this.perPersonPrice=perPersonPrice;
@@ -18,6 +19,7 @@ public class TourPackage extends Event {
 
     public int geTperPersonPrice(){return perPersonPrice;}
 
+
     public boolean registerForTour(int participants, String contactNo){
         if(geTnumOfParticipants()<=(numOfRegisteredParticipants+participants)){
             numOfRegisteredParticipants+=participants;
@@ -27,9 +29,11 @@ public class TourPackage extends Event {
         return false;
     }
 
+
     public void addPlacesToVisit(String placeToVisit){
         placesToVisit.add(placeToVisit);
     }
+
 
     public double getBill() {
         int totalBill = numOfRegisteredParticipants*perPersonPrice;
