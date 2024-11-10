@@ -21,7 +21,19 @@ abstract public class Event {
         this.tasks=new ArrayList<>();
     };
 
+    // getter methods
+
+    public String geTeventTitle(){return eventTitle;}
+    public String geTeventId(){return eventId;}
+    public String geTeventManager(){return eventManager;}
+    public String geTcustomerContact(){return customerContact;}
+    public int geTdurationInDays(){return durationInDays;}
+    public int geTnumOfParticipants(){return numOfParticipants;}
+    public int geTunitPrice(){return unitPrice;}
+    public LocalDate geTeventDate(){return eventDate;}
+    // setter methods
     protected void addPrefixCodeToId(String prefix) {
+        eventId=prefix+eventId;
     };
 
     public void addTask(String title, String description) {

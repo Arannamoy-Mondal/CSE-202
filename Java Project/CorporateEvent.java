@@ -6,6 +6,7 @@ public class CorporateEvent extends Event {
     public CorporateEvent(String eventTitle, String customerContact, LocalDate eventDate,
             int durationInDays, int numOfParticipants) {
         super(eventTitle, customerContact, eventDate, durationInDays, numOfParticipants);
+        addPrefixCodeToId("CC");
     }
 
     @Override
