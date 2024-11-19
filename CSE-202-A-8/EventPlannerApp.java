@@ -71,21 +71,34 @@ public class EventPlannerApp {
                         evp1.acceptEvent(eventId);
                     } else if (op == 5) {
                         evp1.showEvents();
-                        String eventId = new Scanner(System.in).next(), managerName = new Scanner(System.in).next();
+                        System.out.println("Event id:");
+                        String eventId = new Scanner(System.in).next();
+                        System.out.println("Event manager:");
+                        String managerName = new Scanner(System.in).next();
                         ;
                         evp1.assignEventManager(eventId, managerName);
                     } else if (op == 6) {
                         evp1.showEvents();
-                        String eventId = new Scanner(System.in).next(), title = new Scanner(System.in).next(),
-                                description = new Scanner(System.in).next();
+                        System.out.println("Event id:");
+                        String eventId = new Scanner(System.in).next();
+                        System.out.println("Task title:");
+                        String title = new Scanner(System.in).next();
+                        System.out.println("Task description:");
+                        String description = new Scanner(System.in).next();
                         evp1.addEventTask(eventId, title, description);
                     } else if (op == 7) {
                         evp1.showEvents();
-                        String eventId = new Scanner(System.in).next(), title = new Scanner(System.in).next();
+                        System.out.println("Event id:");
+                        String eventId = new Scanner(System.in).next();
+                        System.out.println("Task title:");
+                        String title = new Scanner(System.in).next();
                         evp1.startEventTask(eventId, title);
                     } else if (op == 8) {
                         evp1.showEvents();
-                        String eventId = new Scanner(System.in).next(), title = new Scanner(System.in).next();
+                        System.out.println("Event id:");
+                        String eventId = new Scanner(System.in).next();
+                        System.out.println("Task title:");
+                        String title = new Scanner(System.in).next();
                         evp1.completeEventTask(eventId, title);
                     }
                 }
