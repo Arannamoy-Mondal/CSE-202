@@ -1,9 +1,9 @@
 // package event.lib;
 
 import java.time.*;
+import java.time.format.*;
 import java.util.ArrayList;
 import java.util.Random;
-import java.time.format.*;
 
 abstract public class Event {
     private String eventTitle, eventId, eventManager, customerContact;
@@ -57,6 +57,10 @@ abstract public class Event {
         return eventDate;
     }
 
+    public ArrayList<task> getTasks()
+    {
+        return tasks;
+    }
     // setter methods
     protected void addPrefixCodeToId(String prefix) {
         eventId = prefix + eventId;

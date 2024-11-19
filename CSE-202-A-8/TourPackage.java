@@ -16,12 +16,12 @@ public class TourPackage extends Event {
     }
     
     // getter methods
-
     public int geTperPersonPrice(){return perPersonPrice;}
+    public int getNumOfRegisteredParticipates(){return  numOfRegisteredParticipants;}
 
 
     public boolean registerForTour(int participants, String contactNo){
-        if(geTnumOfParticipants()<=(numOfRegisteredParticipants+participants)){
+        if(geTnumOfParticipants()>=(numOfRegisteredParticipants+participants)){
             numOfRegisteredParticipants+=participants;
             customerContacts.add(contactNo);
             return true;
@@ -38,5 +38,14 @@ public class TourPackage extends Event {
     public double getBill() {
         int totalBill = numOfRegisteredParticipants*perPersonPrice;
         return totalBill;
+    }
+
+    @Override
+    public String toString() {
+        return "Event title: " + geTeventTitle() + "\nEvent id: " + geTeventId() +
+                "\nEvent manager: " + geTeventManager() +
+                "\nCsutomer contact: " + geTcustomerContact() + "\nEvent date: " + geTeventDate() + "\nDuration in days: "
+                + geTdurationInDays() + "\nNum of participants: " + geTnumOfParticipants() + "\nUnit price: " + geTperPersonPrice()
+                + "\nTasks " + getTasks();
     }
 }

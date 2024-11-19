@@ -69,6 +69,7 @@ public class EventPlanner {
     public void acceptEvent(String eventID) {
         Event chk = findRequestedEvent(eventID);
         if (chk != null) {
+            events.add(chk);
             requestedEvents.remove(chk);
         }
     }
@@ -142,5 +143,12 @@ public class EventPlanner {
             return chk.getBill();
         }
         return 0;
+    }
+
+
+
+    // testing purpose only
+    public void showEvents(){
+        System.out.println(events);
     }
 }

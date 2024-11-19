@@ -11,7 +11,9 @@ public class CorporateEvent extends Event {
         super(eventTitle, customerContact, eventDate, durationInDays, numOfParticipants);
         addPrefixCodeToId("CC");
     }
-
+    public void setVenue(String venue){
+        this.venue=venue;
+    }
     @Override
     public double getBill() {
         if (hasDiscount == true) {
