@@ -2,6 +2,7 @@
 # Help -> Eclipse User Storage -> Eclipse Market Place -> Search -> e(fx)clipse install 
 
 # File structure of IntelliJ vs Eclipse:
+
 ┌─────────┬─────────────────┬──────────────────┐
 │ (index) │ Eclipse         │ IntelliJ_IDEA    │
 ├─────────┼─────────────────┼──────────────────┤
