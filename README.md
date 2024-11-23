@@ -24,3 +24,7 @@ https://download.eclipse.org/efxclipse/updates-nightly/site/
 │ 5       │ 'Path-Variable' │ 'Class-Variable' │
 └─────────┴─────────────────┴──────────────────┘
 ```
+# VM Arguments:
+```txt
+--module-path "path\openjfx-23.0.1_windows-x64_bin-sdk\javafx-sdk-23.0.1\lib" --add-modules javafx.controls,javafx.fxml
+```
