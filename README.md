@@ -12,6 +12,10 @@ Step 2: File -> File Structure -> Libraries -> + "Add All JavaFx JDK Files" ->
 ``
 Step 3: Current File -> Edit Configurations -> Edit COnfiguration Templates -> Application -> Modify Options -> Add VM Options -> "1st dropdown box select Oracle JDK " -> Add VM Arguments
 ``
+# Add VM Arguments:
+```txt
+--module-path "path\openjfx-23.0.1_windows-x64_bin-sdk\javafx-sdk-23.0.1\lib" --add-modules javafx.controls,javafx.fxml
+```
 
 # If FXML file not create, then " Install new software " and add software. Links ( N.B. Please check the link is it vulnerable or not? You can simply chcek it by virus total. Do it at own risk. ):
 ```txt
@@ -36,7 +40,4 @@ https://download.eclipse.org/efxclipse/updates-nightly/site/
 │ 5       │ 'Path-Variable' │ 'Class-Variable' │
 └─────────┴─────────────────┴──────────────────┘
 ```
-# VM Arguments:
-```txt
---module-path "path\openjfx-23.0.1_windows-x64_bin-sdk\javafx-sdk-23.0.1\lib" --add-modules javafx.controls,javafx.fxml
-```
+
