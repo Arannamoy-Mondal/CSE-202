@@ -1,6 +1,6 @@
 # Set up javafx For Eclipse
 # Help -> Eclipse User Storage -> Eclipse Market Place -> Search -> e(fx)clipse install 
-# Set up for intelliJ student pack account:
+# Set up for IntelliJ student pack account:
 ``
 Step 1: File -> New -> Project -> Java -> "Select JDK" -> 
 ``
