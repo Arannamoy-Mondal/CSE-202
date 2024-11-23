@@ -49,4 +49,4 @@ File -> Project Structure -> Modules -> " Add Module by + sign " -> Import Modul
 `
 File -> Project Structure -> Modules -> Dependencies " From Source Path Dependecies " -> + -> Module Dependency -> Select Module -> 
 `
-`
+
