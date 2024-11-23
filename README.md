@@ -4,12 +4,15 @@
 ``
 Step 1: File -> New -> Project -> Java -> "Select JDK" -> 
 ``
+
 ``
 Step 2: File -> File Structure -> Libraries -> + "Add All JavaFx JDK Files" ->
 ``
+
 ``
 Step 3: Current File -> Edit Configurations -> Edit COnfiguration Templates -> Application -> Modify Options -> Add VM Options -> "1st dropdown box select Oracle JDK " -> Add VM Arguments
 ``
+
 # If FXML file not create, then " Install new software " and add software. Links ( N.B. Please check the link is it vulnerable or not? You can simply chcek it by virus total. Do it at own risk. ):
 ```txt
 https://download.eclipse.org/justj/?file=efxclipse/updates-nightly/site
