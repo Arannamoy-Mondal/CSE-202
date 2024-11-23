@@ -1,7 +1,7 @@
 # Set up javafx
 # Help -> Eclipse User Storage -> Eclipse Market Place -> Search -> e(fx)clipse install 
 
-# If FXML file not create, then " Install new software " and add software. Links ( N.B. Please check the link is it vulnerable or not? You can simply chcek it by virus total. ):
+# If FXML file not create, then " Install new software " and add software. Links ( N.B. Please check the link is it vulnerable or not? You can simply chcek it by virus total. Do it at own risk. ):
 ```txt
 https://download.eclipse.org/justj/?file=efxclipse/updates-nightly/site
 ```
