@@ -46,5 +46,5 @@ https://download.eclipse.org/efxclipse/updates-nightly/site/
 File -> Project Structure -> Modules -> " Add Module by + sign " -> Import Module -> Choose One ( Prefer Create module from existing source ) -> "Overwritten/ Reuse: Choose Reuse " -> 
 `
 
-`File -> Project Structure -> Modules -> Dependencies " From Source Path Dependecies " -> + -> Module Dependency -> Select Module ->`
+``File -> Project Structure -> Modules -> Dependencies " From Source Path Dependecies " -> + -> Module Dependency -> Select Module ->``
 
