@@ -1,4 +1,4 @@
-# Set up javafx
+# Set up javafx For Eclipse
 # Help -> Eclipse User Storage -> Eclipse Market Place -> Search -> e(fx)clipse install 
 
 # If FXML file not create, then " Install new software " and add software. Links ( N.B. Please check the link is it vulnerable or not? You can simply chcek it by virus total. Do it at own risk. ):
