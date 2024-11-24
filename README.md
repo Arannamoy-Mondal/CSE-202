@@ -43,14 +43,11 @@ https://download.eclipse.org/efxclipse/updates-nightly/site/
 
 # Link two dependecies on IntelliJ:
 `
-
+<!--start topics-->
 <div id="topic">
     <li><a href="#sceneController">Scene Controller</a></li>
     <li><a href="#communicationBetweenController">Communication Between Controller</a></li>
     <li><a href="#logoutandexit">Log Out And Alert Box</a></li>
-</div>
-<div id="sceneController">
-    <a href="#topic">Topic</a>
 </div>
 <div id="sceneController">
     <a href="#topic">Topic</a>
