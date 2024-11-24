@@ -40,7 +40,12 @@ https://download.eclipse.org/efxclipse/updates-nightly/site/
 │ 5       │ 'Path-Variable' │ 'Class-Variable' │
 └─────────┴─────────────────┴──────────────────┘
 ```
+# Link two dependencies on IntelliJ
+`
+File -> Project Structure -> Modules -> " Add Module by + sign " -> Import Module -> Choose One ( Prefer Create module from existing source ) -> "Overwritten/ Reuse: Choose Reuse " -> 
+`
 
+``File -> Project Structure -> Modules -> Dependencies " From Source Path Dependecies " -> + -> Module Dependency -> Select Module ->``
 
 <!--start topics-->
 <div id="topic">
@@ -259,8 +264,5 @@ public class Controller {
 ```
 
 </div>
-File -> Project Structure -> Modules -> " Add Module by + sign " -> Import Module -> Choose One ( Prefer Create module from existing source ) -> "Overwritten/ Reuse: Choose Reuse " -> 
-`
 
-``File -> Project Structure -> Modules -> Dependencies " From Source Path Dependecies " -> + -> Module Dependency -> Select Module ->``
 
